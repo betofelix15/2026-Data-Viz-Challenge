@@ -1,0 +1,135 @@
+\documentclass[final]{beamer}  
+  \usepackage[english]{babel}
+  \usepackage[latin1]{inputenc}
+  \usepackage{amsmath,amsthm, amssymb, latexsym}
+  \usepackage[T1]{fontenc}
+  \usepackage{helvet}
+  \usepackage{multicol}
+  \usepackage[dvipsnames]{xcolor} % Load xcolor with extra named colors
+    \setbeamerfont{bibliography item}{size=\scriptsize}
+    \setbeamerfont{bibliography entry author}{size=\scriptsize}
+    \setbeamerfont{bibliography entry title}{size=\scriptsize}
+    \setbeamerfont{bibliography entry location}{size=\scriptsize}
+    \setbeamerfont{bibliography entry note}{size=\scriptsize}
+    
+    %\renewcommand*{\bibfont}{\tiny}
+    %\setlength{\bibitemsep}{0pt}
+    %\setlength{\bibhang}{0pt}
+  \usepackage[
+  orientation=portrait,
+  size=a4,
+  scale=1.4
+  ]{beamerposter}
+  \setbeamertemplate{caption}[numbered]
+  \usepackage{graphicx}
+  \usepackage{tikz}
+  \usepackage{lipsum} 
+
+  % citations
+  \usepackage{biblatex} %Imports biblatex package
+  \addbibresource{references.bib} %Import the bibliography file
+
+  \setbeamertemplate{title page}{
+    \begin{center}
+        \vskip0.3em
+        {\usebeamerfont{title}\inserttitle\par}
+        \vskip0.2em
+        {\usebeamerfont{author}\insertauthor\par}
+        \vskip0.1em
+        {\usebeamerfont{institute}\insertinstitute\par}
+    \end{center}
+}
+
+
+  \title{\huge \textcolor{Blue}{\textbf{A Tale of Two Counties:} \emph{Shellfish Industry Employment and Environmental Conditions}}}
+  \author{Jesus Felix De Los Reyes, Logan Haviland, Mumtahinah Zia}
+  \institute[]{Utah State University}
+
+\begin{document}
+
+\begin{frame}[fragile]{} 
+
+\maketitle
+
+    \begin{block}{\textbf{The Shellfish Industry}}
+    Industries that revolve around fishing have many unique opportunities and challenges dealing with demand, changing water temperature, catch limits, pollution, off-seasons, and weather.
+    The shellfish industry is a thriving part of coastal regions of the United States. 28.1 million pounds of oysters, 8 million pounds of clams, and 650,000 pounds of mussels were produced by U.S. Farmers in 2023, leading to \$294.6 million in economic growth \cite{shellfish_noaa}. Although it represents a large portion of coastal economies, there is growing concern on decreasing shellfish catch. The monthly Employment Level \cite{emp_data} is a critical indicator for assessing the economic status of the Shellfish fishing sector (Mollusks, Clams, Lobsters, Crabs, etc.). We look at two different counties, in different coasts, that hold the highest average employment level between 2021 to 2025 (see Figure ~\ref{fig:two_county_comp}). This time frame is used to account for the most recent and updated information and adjustments made. Along with employment, we look at the average sea surface temperature (SST) along the coastline of Washington State and Massachusetts. 
+        
+    \end{block}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{two_county_comaparison.png}
+    \caption{Average Employment and Sea Surface Temperature in WA and MA Coastline: 2021-2025}
+    \label{fig:two_county_comp}
+\end{figure}
+
+	
+% ---------------------------------------------------------%
+\begin{columns}
+    \begin{column}{.48\textwidth}	
+	\begin{exampleblock}{Shellfish Employment in Pacific and Bristol County}
+    The two regions (Washington State and Massachusetts Coastline), were selected due to their importance and dominance in producing shellfish. In particular, the two counties with the highest employment in the shellfish fishing industry are Pacific County (WA) and Bristol County (MA). 
+    
+    As the largest shellfish production and processing center in Washington State and the leader in shellfish culture industry on the west coast, Pacific County is an essential component to the shellfish industry. The major marine resources include Dungeness crab, Pacific pink shrimp, albacore tuna, and bottomfish production, generating over \$25 million in personal income, and over a thousand jobs to the county's economy. In addition, nearly 50 million pounds of oysters and clams are produced each year, a wholesale value of over \$10 million. The shellfish industry generates over \$12 million in personal income, and provides nearly 600 jobs to the local economy annually \cite{shellfish_pacific_county}.
+
+    As the home of New Bedford, one of the nation's most valuable commercial fishing ports and a port whose landed value is driven primarily by Atlantic sea scallops, Bristol County is an important center of the Massachusetts shellfish and seafood industry. The county’s major shellfish resources include Atlantic sea scallops, oysters, quahogs or hard-shell clams, soft-shell clams, and bay scallops%, with wild harvest and aquaculture activities occurring in coastal communities such as New Bedford, Fairhaven, Dartmouth, and Westport %
+    \cite{fisheries_us_noaa}. In 2018, Bristol county's broader living-resources sector, which includes commercial fishing, shellfish farming, seafood processing, wholesaling, and seafood retailing, contained approximately 248 establishments and 2,661 jobs, generated about \$204 million in wages, and contributed approximately \$511 million in gross domestic product \cite{padanaram_harbor}.
+	\end{exampleblock}
+	\end{column}
+
+ % ---------------------------------------------------------%
+
+    \begin{column}{.48\textwidth}
+
+    %\begin{block}%{\textbf{Employment}}
+%Employment in the shellfish industry involves....
+     %\end{block}
+		
+	\begin{block}{\textbf{Environment \& Shellfish}}
+    Shellfish are subject to many environmental conditions to their habitat. These are sea surface temperature and acidification. As sea temperature increase beyond tolerable levels, farmed species are increasingly susceptible to  predators, diseases, and organ stress. Industry operations are affected positively and negatively, as the climate and seasons change \cite{climate_shellfish}.
+
+    The ocean captures  carbon dioxide (CO\textsubscript{2}) in the air. As human activity increases in the atmosphere, higher levels of (CO\textsubscript{2}) cause Ph levels to decrease in the ocean.
+    Shellfish are some of the the most vulnerable fisheries to a change in acidification. It makes it harder for shellfish to build shells, making them more vulnerable to predation, and increases the stress placed on major organs, especially at early stages of life \cite{climate_shellfish}.
+
+    Seasonality appears to play a big role in shellfish catch, with summers coinciding with employment (see Figure ~\ref{fig:sst_emp_comparison}). Both Bristol county and Pacific county have slightly higher monthly average SST than their respective states. However, the difference is not comparable to the vast difference in shellfish fishing employment between the counties and their state averages.  
+	\end{block}
+
+
+        \begin{block}{\textbf{Monthly SST and Employment}}
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{sst_emp_level_time_series.png}
+    \caption{Monthly Employment Level and Sea Surface Temperature: Comparison of Bristol and Pacific Counties to their respective state average (2021-2025).}
+    \label{fig:sst_emp_comparison}
+    \end{figure}
+    
+	\end{block}
+
+AI Disclaimer: No AI was used in the generation of this report. That includes for idea generation, creativity, editing, or writing. All ideas and errors are our own.
+
+
+	\end{column}
+
+    
+\end{columns}
+
+
+
+
+    
+\end{frame}
+
+
+%if need more space
+\begin{frame}[t] % to place at the top
+    \
+    \begin{block}{Citations}
+    \nocite{*}
+    \printbibliography[heading=none]
+    \end{block}
+\end{frame}
+
+
+
+\end{document}
